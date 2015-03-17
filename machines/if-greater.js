@@ -12,13 +12,15 @@ module.exports = {
     a: {
       description: 'The first value to check (expected to be greater than the second).',
       extendedDescription: 'A value of any type may be provided.',
-      typeclass: '*'
+      typeclass: '*',
+      required: true
     },
 
     b: {
       description: 'The second value to check (expected to be less than the first).',
       extendedDescription: 'A value of any type may be provided.',
-      typeclass: '*'
+      typeclass: '*',
+      required: true
     }
 
   },
