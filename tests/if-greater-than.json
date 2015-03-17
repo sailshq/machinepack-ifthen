@@ -1,0 +1,10 @@
+{
+  "machine": "if-greater-than",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

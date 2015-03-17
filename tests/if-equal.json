@@ -1,0 +1,10 @@
+{
+  "machine": "if-equal",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}
