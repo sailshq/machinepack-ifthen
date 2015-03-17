@@ -44,12 +44,12 @@ module.exports = {
 
     success: {
       friendlyName: 'then',
-      description: 'The first value (a) is greater than the second (b).'
+      description: 'The first value is greater than the second.'
     },
 
     otherwise: {
       friendlyName: 'else',
-      description: 'The first value (a) is NOT greater than the second (b).'
+      description: 'The first value is NOT greater than the second.'
     }
 
   },

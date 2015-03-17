@@ -13,7 +13,8 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {
-    "machine": "^3.0.0"
+    "machine": "^3.0.0",
+    "lodash": "^3.5.0"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^0.2.2"
@@ -24,7 +25,8 @@
     "machines": [
       "if-defined",
       "if-less-than",
-      "if-greater-than"
+      "if-greater-than",
+      "if-equal"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
