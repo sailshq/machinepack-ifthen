@@ -10,9 +10,9 @@ module.exports = {
   inputs: {
 
     value: {
+      friendlyName: 'Value',
       description: 'The value to check.',
       extendedDescription: 'A value of any type may be provided.  If it evaluates to \'undefined\', the \'otherwise\' exit will be triggered.  Otherwise the \'then\' exit will be triggered.',
-      friendlyName: 'value',
       typeclass: '*',
       required: true
     }

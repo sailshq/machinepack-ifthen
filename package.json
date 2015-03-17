@@ -23,7 +23,8 @@
     "machineDir": "machines/",
     "machines": [
       "if-defined",
-      "if-greater"
+      "if-less-than",
+      "if-greater-than"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
