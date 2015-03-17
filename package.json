@@ -1,0 +1,31 @@
+{
+  "name": "machinepack-ifthen",
+  "version": "0.1.0",
+  "description": "Machines for branching based on comparisons, validations, etc.",
+  "scripts": {
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
+  },
+  "keywords": [
+    "If...Then",
+    "machines",
+    "machinepack"
+  ],
+  "author": "Mike McNeil",
+  "license": "MIT",
+  "dependencies": {
+    "machine": "^3.0.0"
+  },
+  "devDependencies": {
+    "test-machinepack-mocha": "^0.2.2"
+  },
+  "machinepack": {
+    "friendlyName": "If...Then",
+    "machineDir": "machines/",
+    "machines": [],
+    "testsUrl": "https://travis-ci.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
