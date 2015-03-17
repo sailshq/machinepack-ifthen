@@ -21,6 +21,14 @@ module.exports = {
       extendedDescription: 'A value of any type may be provided.',
       typeclass: '*',
       required: true
+    },
+
+    isInclusive: {
+      friendlyName: 'Inclusive? (>=)',
+      description: 'Whether to trigger the "then" exit if both values are equal.',
+      defaultsTo: false,
+      example: true,
+      extendedDescription: 'If set, this machine will use the >= operator for comparison.'
     }
 
   },
@@ -49,6 +57,12 @@ module.exports = {
 
 
   'fn': function(inputs, exits, env) {
+    if (inputs.isInclusive){
+      if (inputs.a >= inputs.b) {
+        return exits.success();
+      }
+      return exits.otherwise();
+    }
     if (inputs.a > inputs.b) {
       return exits.success();
     }
