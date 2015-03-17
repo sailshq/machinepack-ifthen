@@ -21,7 +21,10 @@
   "machinepack": {
     "friendlyName": "If...Then",
     "machineDir": "machines/",
-    "machines": [],
+    "machines": [
+      "if-defined",
+      "if-greater"
+    ],
     "testsUrl": "https://travis-ci.org/"
   },
   "repository": {
