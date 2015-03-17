@@ -7,6 +7,12 @@ module.exports = {
   description: 'Determine whether the first value is less than the second.',
 
 
+  cacheable: true,
+
+
+  sync: true,
+
+
   inputs: {
 
     a: {

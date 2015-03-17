@@ -7,6 +7,12 @@ module.exports = {
   description: 'Determine whether the value is defined.',
 
 
+  cacheable: true,
+
+
+  sync: true,
+
+
   inputs: {
 
     value: {

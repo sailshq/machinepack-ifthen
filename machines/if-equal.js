@@ -10,6 +10,12 @@ module.exports = {
   extendedDescription: 'Note that this machine performs a deep equality check by value.  That is, it doesn\'t care about memory addresses or things like that-- it\'s only interested in the actual semantic value of the data.  Basically, this is like what you would get if you stringified two JSON values and compared the resulting strings.',
 
 
+  cacheable: true,
+
+
+  sync: true,
+
+
   inputs: {
 
     a: {
