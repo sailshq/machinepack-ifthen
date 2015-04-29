@@ -5,6 +5,42 @@
       "todo": true,
       "using": {},
       "outcome": "success"
+    },
+    {
+      "using": {
+        "a": "100",
+        "b": "1"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "a": "100",
+        "b": "101"
+      },
+      "outcome": "otherwise"
+    },
+    {
+      "using": {
+        "a": "-100",
+        "b": "101"
+      },
+      "outcome": "otherwise"
+    },
+    {
+      "using": {
+        "a": "101",
+        "b": "101"
+      },
+      "outcome": "otherwise"
+    },
+    {
+      "using": {
+        "a": "101",
+        "b": "101",
+        "isInclusive": "true"
+      },
+      "outcome": "success"
     }
   ]
 }
