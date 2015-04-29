@@ -26,8 +26,7 @@
       "if-defined",
       "if-less-than",
       "if-greater-than",
-      "if-equal",
-      "if-true"
+      "if-equal"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
