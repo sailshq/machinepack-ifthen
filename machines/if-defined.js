@@ -47,10 +47,10 @@ module.exports = {
   },
 
 
-  'defaultExit': 'success',
+  defaultExit: 'success',
 
 
-  'fn': function(inputs, exits, env) {
+  fn: function(inputs, exits, env) {
     if (typeof(inputs.value) === 'undefined') {
       return exits.otherwise();
     }
