@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'If defined',
+  friendlyName: 'Is it defined?',
 
 
   description: 'Determine whether the value is defined.',
@@ -41,7 +41,7 @@ module.exports = {
 
     otherwise: {
       friendlyName: 'else',
-      description: 'The value is undefined.'
+      description: 'The value is not defined.'
     }
 
   },
