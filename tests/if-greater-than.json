@@ -2,11 +2,6 @@
   "machine": "if-greater-than",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "a": "100",
         "b": "1"
