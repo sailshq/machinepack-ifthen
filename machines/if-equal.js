@@ -19,7 +19,7 @@ module.exports = {
   inputs: {
 
     a: {
-      friendlyName: 'Value',
+      friendlyName: 'First value',
       description: 'The first value to check (expected to be equal to the second).',
       extendedDescription: 'A value of any type may be provided.',
       typeclass: '*',
@@ -27,7 +27,7 @@ module.exports = {
     },
 
     b: {
-      friendlyName: 'Other value',
+      friendlyName: 'Second value',
       description: 'The second value to check (expected to be equal to the first).',
       extendedDescription: 'A value of any type may be provided.',
       typeclass: '*',
@@ -56,10 +56,10 @@ module.exports = {
   },
 
 
-  'defaultExit': 'success',
+  defaultExit: 'success',
 
 
-  'fn': function(inputs, exits, env) {
+  fn: function(inputs, exits, env) {
     var _ = require('lodash');
 
     if (_.isEqual(inputs.a, inputs.b)) {
