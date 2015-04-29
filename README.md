@@ -8,7 +8,7 @@
 Machines for branching based on comparisons, validations, etc.
 
 
-## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-ifthen.svg)](http://badge.fury.io/js/machinepack-ifthen) [![Build Status](https://travis-ci.org/treelinehq/machinepack-ifthen.png?branch=master)](https://travis-ci.org/mikermcneil/machinepack-ifthen)
+## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-ifthen.svg)](http://badge.fury.io/js/machinepack-ifthen) [![Build Status](https://travis-ci.org/treelinehq/machinepack-ifthen.png?branch=master)](https://travis-ci.org/treelinehq/machinepack-ifthen)
 
 ```sh
 $ npm install machinepack-ifthen
