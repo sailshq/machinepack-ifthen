@@ -2,8 +2,52 @@
   "machine": "if-equal",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
+      "using": {
+        "a": "10",
+        "b": "101"
+      },
+      "outcome": "otherwise"
+    },
+    {
+      "using": {
+        "a": "10",
+        "b": "10"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "a": "hi",
+        "b": "hi"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "a": "hi",
+        "b": "somethingelse"
+      },
+      "outcome": "otherwise"
+    },
+    {
+      "using": {
+        "a": "[\"stuff\", \"things\"]",
+        "b": "[\"stuff\", \"things\"]"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "a": "[\"stuff\", \"things\"]",
+        "b": "[{\"stuff\":\"foo\"}, {\"stuff\": \"things\"}]"
+      },
+      "outcome": "otherwise"
+    },
+    {
+      "using": {
+        "a": "[{\"stuff\":\"foo\"}, {\"stuff\": \"things\"}]",
+        "b": "[{\"stuff\":\"foo\"}, {\"stuff\": \"things\"}]"
+      },
       "outcome": "success"
     }
   ]
