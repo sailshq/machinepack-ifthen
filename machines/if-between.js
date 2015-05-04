@@ -53,7 +53,10 @@ module.exports = {
 
   fn: function (inputs, exits) {
     var _ = require('lodash');
-    if (_.inRange(inputs.value, inputs.min, inputs.max+0.001)){
+
+    // because lodash's `inRange` is only inclusive on the bottom side,
+    // we'll make it inclusive here by adding an additional check:
+    if (_.inRange(inputs.value, inputs.min, inputs.max) || (inputs.max === inputs.value)){
       return exits.success();
     }
     return exits.otherwise();
