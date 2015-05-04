@@ -5,6 +5,46 @@
       "todo": true,
       "using": {},
       "outcome": "success"
+    },
+    {
+      "using": {
+        "value": "10",
+        "min": "9",
+        "max": "11"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "value": "10",
+        "min": "9.5",
+        "max": "11"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "value": "-10",
+        "min": "9.5",
+        "max": "11"
+      },
+      "outcome": "otherwise"
+    },
+    {
+      "using": {
+        "value": "-10",
+        "min": "9.5",
+        "max": "-11"
+      },
+      "outcome": "otherwise"
+    },
+    {
+      "using": {
+        "value": "-10",
+        "min": "-9.5",
+        "max": "-11"
+      },
+      "outcome": "otherwise"
     }
   ]
 }

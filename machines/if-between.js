@@ -4,7 +4,7 @@ module.exports = {
   friendlyName: 'If between',
 
 
-  description: 'Generate a value is within the specified range.',
+  description: 'Generate a value is within the specified range (inclusive).',
 
 
   sync: true,
@@ -53,7 +53,7 @@ module.exports = {
 
   fn: function (inputs, exits) {
     var _ = require('lodash');
-    if (_.inRange(inputs.value, inputs.min, inputs.max)){
+    if (_.inRange(inputs.value, inputs.min, inputs.max+0.001)){
       return exits.success();
     }
     return exits.otherwise();
