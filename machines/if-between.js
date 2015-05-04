@@ -14,9 +14,9 @@ module.exports = {
 
     value: {
       friendlyName: 'Value',
-      description: 'The value to check.',
-      extendedDescription: 'A value of any type may be provided.',
-      typeclass: '*'
+      description: 'The number to check.',
+      example: 3,
+      required: true
     },
 
     min: {
@@ -28,7 +28,7 @@ module.exports = {
 
     max: {
       friendlyName: 'No greater than (<=)',
-      example: 1,
+      example: 4,
       description: 'The maximum acceptable number',
       required: true
     }
