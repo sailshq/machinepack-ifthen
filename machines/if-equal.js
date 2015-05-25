@@ -22,7 +22,7 @@ module.exports = {
       friendlyName: 'First value',
       description: 'The first value to check (expected to be equal to the second).',
       extendedDescription: 'A value of any type may be provided.',
-      typeclass: '*',
+      example: '===',
       required: true
     },
 
@@ -30,7 +30,7 @@ module.exports = {
       friendlyName: 'Second value',
       description: 'The second value to check (expected to be equal to the first).',
       extendedDescription: 'A value of any type may be provided.',
-      typeclass: '*',
+      example: '===',
       required: true
     }
 

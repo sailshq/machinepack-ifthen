@@ -19,7 +19,7 @@ module.exports = {
       friendlyName: 'Value',
       description: 'The value to check.',
       extendedDescription: 'A value of any type may be provided.  If it evaluates to \'undefined\', the \'otherwise\' exit will be triggered.  Otherwise the \'then\' exit will be triggered.',
-      typeclass: '*'
+      example: '==='
     }
 
   },
@@ -34,7 +34,13 @@ module.exports = {
     success: {
       friendlyName: 'then',
       description: 'The value is defined.',
-      getExample: function(inputs, env, input) {
+      getExample: function(inputs, env) {
+        var _ = env._;
+
+        // If `value` is not available, it means that we should leave it `undefined`.
+        if (_.isUndefined(inputs.value)) {
+          return;
+        }
         return inputs.value;
       }
     },
@@ -45,9 +51,6 @@ module.exports = {
     }
 
   },
-
-
-  defaultExit: 'success',
 
 
   fn: function(inputs, exits, env) {

@@ -19,7 +19,7 @@ module.exports = {
       friendlyName: 'Lesser value',
       description: 'The first value to check (expected to be less than the second).',
       extendedDescription: 'A value of any type may be provided.',
-      typeclass: '*',
+      example: '===',
       required: true
     },
 
@@ -27,7 +27,7 @@ module.exports = {
       friendlyName: 'Other value',
       description: 'The second value to check (expected to be greater than the first).',
       extendedDescription: 'A value of any type may be provided.',
-      typeclass: '*',
+      example: '===',
       required: true
     },
 
@@ -59,9 +59,6 @@ module.exports = {
     }
 
   },
-
-
-  'defaultExit': 'success',
 
 
   'fn': function(inputs, exits, env) {
