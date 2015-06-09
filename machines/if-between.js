@@ -4,7 +4,7 @@ module.exports = {
   friendlyName: 'If between',
 
 
-  description: 'Generate a value is within the specified range (inclusive).',
+  description: 'Check that a value is within the specified range (inclusive).',
 
 
   sync: true,
