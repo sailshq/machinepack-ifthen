@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^3.9.2",
-    "machine": "^9.0.3"
+    "machine": "^9.1.2"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^1.0.0"
@@ -28,7 +28,8 @@
       "if-greater-than",
       "if-equal",
       "if-between",
-      "if-then-finally"
+      "if-then-finally",
+      "if-then-finally-sync"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
