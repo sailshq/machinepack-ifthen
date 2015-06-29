@@ -27,7 +27,8 @@ module.exports = {
             like: 'expectedOutput'
           }
         }
-      }
+      },
+      required: true,
     },
 
     orElse: {
@@ -40,6 +41,9 @@ module.exports = {
             like: 'expectedOutput'
           }
         }
+      },
+      defaultsTo: function (_inputs, _exits){
+        return _exits.success();
       }
     },
 
