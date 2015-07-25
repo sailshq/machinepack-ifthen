@@ -13,6 +13,7 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {
+    "browserify-transform-machinepack": "^1.0.2",
     "lodash": "^3.9.2",
     "machine": "^10.3.1"
   },
@@ -32,6 +33,11 @@
       "if-then-finally-sync"
     ],
     "testsUrl": "https://travis-ci.org/"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-transform-machinepack"
+    ]
   },
   "repository": {
     "type": "git",
