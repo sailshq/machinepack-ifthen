@@ -34,15 +34,7 @@ module.exports = {
     success: {
       friendlyName: 'then',
       description: 'The value is defined.',
-      getExample: function(inputs, env) {
-        var _ = env._;
-
-        // If `value` is not available, it means that we should leave it `undefined`.
-        if (_.isUndefined(inputs.value)) {
-          return;
-        }
-        return inputs.value;
-      }
+      like: 'value'
     },
 
     otherwise: {
