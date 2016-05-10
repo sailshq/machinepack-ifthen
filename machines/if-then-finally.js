@@ -10,11 +10,14 @@ module.exports = {
   inputs: {
 
     bool: {
+      friendlyName: 'Condition',
       description: 'The true/false value to check.',
       example: true
     },
 
     then: {
+      friendlyName: 'Then...',
+      description: 'The code to run if the condition is truthy.',
       example: '->',
       contract: {
         inputs: {},
@@ -28,6 +31,8 @@ module.exports = {
     },
 
     orElse: {
+      friendlyName: 'Or else...',
+      description: 'The code to run if the condition is NOT truthy.',
       example: '->',
       contract: {
         inputs: {},
