@@ -23,11 +23,13 @@ module.exports = {
         inputs: {},
         exits: {
           success: {
+            outputFriendlyName: 'Data (optional)',
+            outputDescription: 'The ',
             like: 'expectedOutput'
           }
         }
       },
-      required: true,
+      required: true
     },
 
     orElse: {
@@ -41,15 +43,17 @@ module.exports = {
             like: 'expectedOutput'
           }
         }
-      },
-      defaultsTo: function (_inputs, _exits){
-        return _exits.success();
       }
     },
 
     expectedOutput: {
-      description: 'An example of the expected output value.',
-      example: '*'
+      friendlyName: 'Example result',
+      description: 'An example of what the output data will look like.',
+      extendedDescription: 'If specified, this should be written in RTTC exemplar notation.  It will be used '+
+      'for determining the expected data type of the return value from either `then` or `orElse`, whichever ends up '+
+      'getting run.  By default, this is `*`, meaning any JSON-compatible value is accepted.',
+      isExemplar: true,
+      defaultsTo: '*'
     }
 
   },
@@ -58,16 +62,9 @@ module.exports = {
   exits: {
 
     success: {
-      variableName: 'result',
-      // like: 'expectedOutput',
-      getExample: function (inputs, env){
-        var _ = env._;
-        if (_.isUndefined(inputs.expectedOutput)) {
-          return;
-        }
-        return inputs.expectedOutput;
-      },
-      description: 'Done.',
+      outputFriendlyName: 'Data',
+      outputDescription: 'The data returned from either `then` or `orElse` (if relevant).',
+      like: 'expectedOutput'
     },
 
   },
@@ -76,6 +73,8 @@ module.exports = {
   fn: function (inputs,exits) {
 
     if (inputs.bool) {
+      // Call `then`, then trigger our success exit with its result.
+      // (The appropriate base value will be used if it doesn't have a result.)
       inputs.then().exec({
         error: exits.error,
         success: function (result){
@@ -84,6 +83,14 @@ module.exports = {
       });
     }
     else {
+      // If no `orElse` was provided, then we're done-- just trigger our success exit with no result.
+      // (The appropriate base value will be used.)
+      if (typeof inputs.orElse === 'undefined') {
+        return exits.success();
+      }
+
+      // Otherwise, call `orElse`, then trigger our success exit with its result.
+      // (The appropriate base value will be used if it doesn't have a result.)
       inputs.orElse().exec({
         error: exits.error,
         success: function (result){
