@@ -28,7 +28,9 @@ module.exports = {
 
     success: {
       description: 'The value is defined.',
-      like: 'value'
+      like: 'value',
+      outputFriendlyName: 'Value',
+      outputDescription: 'The input value (guaranteed to be defined).'
     },
 
     otherwise: {
