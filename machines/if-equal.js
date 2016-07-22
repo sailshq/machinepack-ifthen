@@ -51,9 +51,6 @@ module.exports = {
   },
 
 
-  defaultExit: 'success',
-
-
   fn: function(inputs, exits, env) {
     var _ = require('lodash');
 
