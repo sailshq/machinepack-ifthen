@@ -46,9 +46,6 @@ module.exports = {
             description: 'The `Or else...` branch finished executing.'
           }
         }
-      },
-      defaultsTo: function (_inputs, _exits){
-        return _exits.success();
       }
     },
 
