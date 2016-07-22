@@ -10,13 +10,12 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     value: {
-      friendlyName: 'Value',
       description: 'The number to check.',
       example: 3,
       required: true
@@ -25,14 +24,14 @@ module.exports = {
     min: {
       friendlyName: 'At least (>=)',
       example: 1,
-      description: 'The minimum acceptable number',
+      description: 'The minimum acceptable number.',
       required: true
     },
 
     max: {
       friendlyName: 'No greater than (<=)',
       example: 4,
-      description: 'The maximum acceptable number',
+      description: 'The maximum acceptable number.',
       required: true
     }
 
@@ -42,12 +41,11 @@ module.exports = {
   exits: {
 
     success: {
-      friendlyName: 'then',
       description: 'The value is within the specified range.'
     },
 
     otherwise: {
-      friendlyName: 'else',
+      friendlyName: 'Else',
       description: 'The value is NOT within the specified range.'
     }
 

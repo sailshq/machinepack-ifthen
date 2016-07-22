@@ -7,7 +7,7 @@ module.exports = {
   description: 'Determine whether the first value is less than the second.',
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   sync: true,
@@ -44,17 +44,12 @@ module.exports = {
 
   exits: {
 
-    error: {
-      description: 'Unexpected error occurred.'
-    },
-
     success: {
-      friendlyName: 'then',
       description: 'The first value is less than the second.'
     },
 
     otherwise: {
-      friendlyName: 'else',
+      friendlyName: 'Else',
       description: 'The first value is NOT less than the second.'
     }
 

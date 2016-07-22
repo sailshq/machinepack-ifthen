@@ -7,7 +7,7 @@ module.exports = {
   description: 'Determine whether the value is defined.',
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   sync: true,
@@ -16,7 +16,6 @@ module.exports = {
   inputs: {
 
     value: {
-      friendlyName: 'Value',
       description: 'The value to check.',
       extendedDescription: 'A value of any type may be provided.  If it evaluates to \'undefined\', the \'otherwise\' exit will be triggered.  Otherwise the \'then\' exit will be triggered.',
       example: '==='
@@ -27,18 +26,13 @@ module.exports = {
 
   exits: {
 
-    error: {
-      description: 'Unexpected error occurred.'
-    },
-
     success: {
-      friendlyName: 'then',
       description: 'The value is defined.',
       like: 'value'
     },
 
     otherwise: {
-      friendlyName: 'else',
+      friendlyName: 'Else',
       description: 'The value is not defined.'
     }
 

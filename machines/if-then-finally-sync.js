@@ -13,18 +13,21 @@ module.exports = {
   inputs: {
 
     bool: {
+      friendlyName: 'Condition',
       description: 'The true/false value to check.',
       example: true
     },
 
     then: {
+      friendlyName: 'Then...',
+      description: 'The code to run if the condition is truthy.',
       example: '->',
       contract: {
-        sync: true,
         inputs: {},
         exits: {
           success: {
-            like: 'expectedOutput'
+            like: 'expectedOutput',
+            description: 'The `Then...` branch finished executing.'
           }
         }
       },
@@ -32,13 +35,15 @@ module.exports = {
     },
 
     orElse: {
+      friendlyName: 'Or else...',
+      description: 'The code to run if the condition is NOT truthy.',
       example: '->',
       contract: {
-        sync: true,
         inputs: {},
         exits: {
           success: {
-            like: 'expectedOutput'
+            like: 'expectedOutput',
+            description: 'The `Or else...` branch finished executing.'
           }
         }
       },
@@ -58,8 +63,7 @@ module.exports = {
   exits: {
 
     success: {
-      variableName: 'result',
-      // like: 'expectedOutput',
+      description: 'The `Then...` or `Or else...` branch finished executing.',
       getExample: function (inputs, env){
         var _ = env._;
         if (_.isUndefined(inputs.expectedOutput)) {
@@ -67,7 +71,6 @@ module.exports = {
         }
         return inputs.expectedOutput;
       },
-      description: 'Done.',
     },
 
   },
@@ -80,11 +83,12 @@ module.exports = {
     if (inputs.bool) {
       result = inputs.then().execSync();
     }
-    else {
+    else if (typeof inputs.orElse === 'undefined') {
       result = inputs.orElse().execSync();
     }
 
     return exits.success(result);
+
   },
 
 
