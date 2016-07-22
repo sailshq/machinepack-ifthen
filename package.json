@@ -30,7 +30,8 @@
       "if-equal",
       "if-between",
       "if-then-finally",
-      "if-then-finally-sync"
+      "if-then-finally-sync",
+      "if-not-equal"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
