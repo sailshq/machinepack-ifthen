@@ -80,7 +80,7 @@ module.exports = {
     if (inputs.bool) {
       result = inputs.then().execSync();
     }
-    else if (typeof inputs.orElse === 'undefined') {
+    else if (typeof inputs.orElse !== 'undefined') {
       result = inputs.orElse().execSync();
     }
 
