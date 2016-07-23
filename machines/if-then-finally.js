@@ -23,6 +23,8 @@ module.exports = {
         inputs: {},
         exits: {
           success: {
+            outputFriendlyName: 'Data',
+            outputDescription: 'The result (if any) of executing the `Then...` branch.',
             like: 'expectedOutput',
             description: 'The `Then...` branch finished executing.',
           }
@@ -39,6 +41,8 @@ module.exports = {
         inputs: {},
         exits: {
           success: {
+            outputFriendlyName: 'Data',
+            outputDescription: 'The result (if any) of executing the `Or else...` branch.',
             like: 'expectedOutput',
             description: 'The `Or else...` branch finished executing.'
           }
@@ -64,14 +68,7 @@ module.exports = {
     success: {
       outputFriendlyName: 'Data',
       outputDescription: 'The data returned from either `then` or `orElse` (if relevant).',
-      like: 'expectedOutput',
-      getExample: function (inputs, env){
-        var _ = env._;
-        if (_.isUndefined(inputs.expectedOutput)) {
-          return;
-        }
-        return inputs.expectedOutput;
-      },
+      like: 'expectedOutput'
     },
 
   },
