@@ -4,7 +4,7 @@ module.exports = {
   friendlyName: 'If..Then..Finally',
 
 
-  description: 'If the provided value is true, then run the "then" circuit.  Otherwise run the "else" circuit.  Either way, exit "success".',
+  description: 'If the provided value is true, then run the \'then\' circuit.  Otherwise run the \'else\' circuit.  Either way, exit \'success\'.',
 
 
   inputs: {
@@ -36,6 +36,7 @@ module.exports = {
     orElse: {
       friendlyName: 'Or else...',
       description: 'The code to run if the condition is NOT truthy.',
+      extendedDescription: 'If no value is provided for this input, and the condition is not truthy, the \'success\' exit of the machine will be called immediately.',
       example: '->',
       contract: {
         inputs: {},
@@ -76,6 +77,7 @@ module.exports = {
 
   fn: function (inputs,exits) {
 
+    // If the condition is truthy...
     if (inputs.bool) {
       // Call `then`, then trigger our success exit with its result.
       // (The appropriate base value will be used if it doesn't have a result.)
@@ -86,6 +88,8 @@ module.exports = {
         }
       });
     }
+
+    // If the condition is falsy...
     else {
       // If no `orElse` was provided, then we're done-- just trigger our success exit with no result.
       // (The appropriate base value will be used.)

@@ -52,11 +52,16 @@ module.exports = {
 
 
   fn: function(inputs, exits, env) {
+
+    // Import `lodash`.
     var _ = require('lodash');
 
+    // If the two input values are semantically equal, return through `success`.
     if (_.isEqual(inputs.a, inputs.b)) {
       return exits.success();
     }
+
+    // Otherwise return through `otherwise`.
     return exits.otherwise();
   }
 

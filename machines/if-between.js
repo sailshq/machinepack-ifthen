@@ -4,7 +4,10 @@ module.exports = {
   friendlyName: 'If between',
 
 
-  description: 'Check that a value is within the specified range (inclusive).',
+  description: 'Check that a number is within the specified range (inclusive).',
+
+
+  extendedDescription: 'Since this is an inclusive check, the \'success\' exit will be triggered if the given number is equal to the minimum or maximum boundary specified.',
 
 
   sync: true,
@@ -22,16 +25,18 @@ module.exports = {
     },
 
     min: {
-      friendlyName: 'At least (>=)',
+      friendlyName: 'Minimum (>=)',
       example: 1,
-      description: 'The minimum acceptable number.',
+      description: 'The lower bound to check the number against.',
+      extendedDescription: 'Must be less than or equal to the value of `Maximum`.',
       required: true
     },
 
     max: {
-      friendlyName: 'No greater than (<=)',
+      friendlyName: 'Maximum (<=)',
       example: 4,
-      description: 'The maximum acceptable number.',
+      description: 'The upper bound to check the number against.',
+      extendedDescription: 'Must be greater than or equal to the value of `Minimum`.',
       required: true
     }
 
@@ -41,30 +46,34 @@ module.exports = {
   exits: {
 
     success: {
-      description: 'The value is within the specified range.'
+      description: 'The number is within the specified range.'
     },
 
     otherwise: {
       friendlyName: 'Else',
-      description: 'The value is NOT within the specified range.'
+      description: 'The number is NOT within the specified range.'
     }
 
   },
 
 
   fn: function (inputs, exits) {
+
+    // Import `lodash`.
     var _ = require('lodash');
 
-    // if inputs are inconsistent with expectations, bail out w/ `error`
+    // If inputs are inconsistent with expectations, bail out w/ `error`.
     if (inputs.min > inputs.max) {
       return exits.error(new Error('The configured value of the `min` input must be <= that of `max`.'));
     }
 
-    // because lodash's `inRange` is only inclusive on the bottom side,
+    // Because lodash's `inRange` is only inclusive on the bottom side,
     // we'll make it inclusive here by adding an additional check:
     if (_.inRange(inputs.value, inputs.min, inputs.max) || (inputs.max === inputs.value)){
       return exits.success();
     }
+
+    // If the input value is outside the range, trigger the `otherwise` exit.
     return exits.otherwise();
   }
 

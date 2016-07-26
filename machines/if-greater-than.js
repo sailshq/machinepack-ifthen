@@ -33,7 +33,7 @@ module.exports = {
 
     isInclusive: {
       friendlyName: 'Inclusive? (>=)',
-      description: 'Whether to trigger the "then" exit if both values are equal.',
+      description: 'Whether to trigger the \'success\' exit if both values are equal.',
       defaultsTo: false,
       example: true,
       extendedDescription: 'If set, this machine will use the >= operator for comparison.'
@@ -45,27 +45,38 @@ module.exports = {
   exits: {
 
     success: {
-      description: 'The first value is greater than the second.'
+      description: 'The first value is greater than (or equal to, if `Inclusive?` was set) the second.'
     },
 
     otherwise: {
       friendlyName: 'Else',
-      description: 'The first value is NOT greater than the second.'
+      description: 'The first value is NOT greater than (or equal to, if `Inclusive?` was set) the second.'
     }
 
   },
 
 
   'fn': function(inputs, exits, env) {
+
+    // If using the `isInclusive` flag, check whether a >= b.
     if (inputs.isInclusive){
+
+      // If so, return through the `success` exit.
       if (inputs.a >= inputs.b) {
         return exits.success();
       }
+
+      // Otherwise, return through `otherwise`.
       return exits.otherwise();
     }
+
+    // If not using the `isInclusive` flag, check whether a > b.
+    // If so, return through the `success` exit.
     if (inputs.a > inputs.b) {
       return exits.success();
     }
+
+    // Otherwise, return through `otherwise`.
     return exits.otherwise();
   }
 
