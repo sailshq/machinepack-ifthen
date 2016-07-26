@@ -17,6 +17,13 @@
     },
     {
       "using": {
+        "a": "10",
+        "b": "\"10\""
+      },
+      "outcome": "otherwise"
+    },
+    {
+      "using": {
         "a": "hi",
         "b": "hi"
       },
