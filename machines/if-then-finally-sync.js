@@ -23,6 +23,7 @@ module.exports = {
       description: 'The code to run if the condition is truthy.',
       example: '->',
       contract: {
+        sync: true,
         inputs: {},
         exits: {
           success: {
@@ -41,6 +42,7 @@ module.exports = {
       description: 'The code to run if the condition is NOT truthy.',
       example: '->',
       contract: {
+        sync: true,
         inputs: {},
         exits: {
           success: {
