@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'If not defined',
+  friendlyName: 'If not defined...',
 
 
   description: 'Determine whether the value is undefined.',

@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'If greater than (>)',
+  friendlyName: 'If greater than... (>)',
 
 
   description: 'Determine whether the first value is greater than the second.',

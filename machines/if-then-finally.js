@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'If..Then..Finally',
+  friendlyName: 'If..Then..Finally...',
 
 
   description: 'If the provided value is true, then run the \'then\' circuit.  Otherwise run the \'else\' circuit.  Either way, exit \'success\'.',

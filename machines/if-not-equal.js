@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'If not equal (===)',
+  friendlyName: 'If not equal... (!==)',
 
 
   description: 'Determine whether the first value is not equivalent to the second.',

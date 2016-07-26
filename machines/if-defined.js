@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'If defined',
+  friendlyName: 'If defined...',
 
 
   description: 'Determine whether the value is defined.',

@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'If between',
+  friendlyName: 'If between...',
 
 
   description: 'Check that a number is within the specified range (inclusive).',
