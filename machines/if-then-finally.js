@@ -12,7 +12,8 @@ module.exports = {
     bool: {
       friendlyName: 'Condition',
       description: 'The true/false value to check.',
-      example: true
+      example: true,
+      required: true
     },
 
     then: {
