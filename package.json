@@ -25,15 +25,8 @@
     "machineDir": "machines/",
     "machines": [
       "if-defined",
-      "if-not-defined",
-      "if-less-than",
-      "if-greater-than",
-      "if-equal",
-      "if-between",
-      "if-not-between",
       "if-then-finally",
       "if-then-finally-sync",
-      "if-not-equal",
       "if-true",
       "if-false"
     ],
