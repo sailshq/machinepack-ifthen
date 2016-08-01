@@ -24,7 +24,8 @@ module.exports = {
     value: {
       description: 'The value to check.',
       extendedDescription: 'A value of any type may be provided.  If it is "falsey", the \'success\' exit will be triggered.  Otherwise the \'otherwise\' exit will be triggered.',
-      example: '==='
+      example: '===',
+      required: true
     }
 
   },

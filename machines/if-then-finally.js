@@ -12,7 +12,7 @@ module.exports = {
     bool: {
       friendlyName: 'Condition',
       description: 'The true/false value to check.',
-      example: true,
+      example: '===',
       required: true
     },
 

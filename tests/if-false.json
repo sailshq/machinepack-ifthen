@@ -2,10 +2,6 @@
   "machine": "if-false",
   "expectations": [
     {
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "value": null
       },
