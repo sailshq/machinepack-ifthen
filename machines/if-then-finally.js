@@ -81,7 +81,7 @@ module.exports = {
     // If the condition is truthy...
     if (inputs.bool) {
       // Call `then`, then trigger our success exit with its result.
-      // (The appropriate base value will be used if it doesn't have a result.)
+      // The appropriate base value will be used if it doesn't have a result.
       inputs.then().exec({
         error: exits.error,
         success: function (result){
@@ -93,13 +93,13 @@ module.exports = {
     // If the condition is falsy...
     else {
       // If no `orElse` was provided, then we're done-- just trigger our success exit with no result.
-      // (The appropriate base value will be used.)
+      // The appropriate base value will be used.
       if (typeof inputs.orElse === 'undefined') {
         return exits.success();
       }
 
       // Otherwise, call `orElse`, then trigger our success exit with its result.
-      // (The appropriate base value will be used if it doesn't have a result.)
+      // The appropriate base value will be used if it doesn't have a result.
       inputs.orElse().exec({
         error: exits.error,
         success: function (result){

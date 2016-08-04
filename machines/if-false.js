@@ -4,13 +4,10 @@ module.exports = {
   friendlyName: 'If not...',
 
 
-  description: 'Determine whether the value is "falsey".',
+  description: 'Create a code branch, following "Success" if the value is falsy, otherwise "Else".',
 
 
   extendedDescription: 'The \'success\' exit will be triggered for any "falsey" value (`0`, `\'\'`, `null`, `false`, `NaN` and `undefined`).',
-
-
-  sideEffects: 'cacheable',
 
 
   sync: true,
@@ -34,12 +31,12 @@ module.exports = {
   exits: {
 
     success: {
-      description: 'The value is "falsey".',
+      description: 'The specified value was "falsey".',
     },
 
     otherwise: {
       friendlyName: 'Else',
-      description: 'The value is "truthy".'
+      description: 'The specified value was "truthy".'
     }
 
   },
