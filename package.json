@@ -24,7 +24,6 @@
     "friendlyName": "If...Then",
     "machineDir": "machines/",
     "machines": [
-      "if-defined",
       "if-then-finally",
       "if-then-finally-sync",
       "if-true",
