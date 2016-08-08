@@ -10,6 +10,9 @@ module.exports = {
   extendedDescription: 'The \'success\' exit will be triggered for any "truthy" value (everything except `0`, `\'\'`, `null`, `false`, `NaN` and `undefined`).',
 
 
+  sideEffects: 'cacheable',
+
+
   sync: true,
 
 
